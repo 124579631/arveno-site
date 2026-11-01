@@ -3,117 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arveno — 设计与技术工作室</title>
-  <meta name="description" content="Arveno 是一个专注于网站、产品与品牌数字体验的小型工作室。">
-  <meta property="og:title" content="Arveno">
-  <meta property="og:description" content="设计与技术工作室">
+  <title>Arveno — 数字工坊</title>
+  <meta name="description" content="Arveno 是一个小而专注的数字工坊，把想法打磨成网站、产品与品牌。">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:title" content="Arveno — 数字工坊">
+  <meta property="og:description" content="把想法打磨成网站、产品与品牌。">
   <meta property="og:url" content="https://arveno.tech/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
   <header class="nav">
-    <div class="container nav-inner">
-      <a class="logo" href="#top"><img src="assets/favicon.svg" alt="" width="28" height="28">Arveno</a>
-      <button class="menu-btn" aria-label="打开菜单" aria-expanded="false">☰</button>
-      <nav class="links">
-        <a href="#services">服务</a>
-        <a href="#work">作品</a>
-        <a href="#about">关于</a>
-        <a href="#contact" class="btn btn-sm">联系我们</a>
-      </nav>
-    </div>
+    <a class="logo" href="#top">arveno<span class="dot">.</span></a>
+    <nav class="links">
+      <a href="#services">服务</a>
+      <a href="#work">作品</a>
+      <a href="#about">关于</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <span class="clock mono" id="clock">UTC+8 · --:--</span>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Design · Code · Product</p>
-        <h1>把想法变成<br><span class="grad">好用又好看</span>的产品</h1>
-        <p class="lead">Arveno 是一个小而专注的工作室，提供网站建设、产品设计与软件开发服务。</p>
-        <div class="actions">
-          <a href="#work" class="btn">查看作品</a>
-          <a href="#contact" class="btn btn-ghost">开始合作 →</a>
-        </div>
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="mono meta">[ 数字工坊 / Digital Atelier — Est. 2026 ]</p>
+        <h1 class="wordmark" aria-label="Arveno">
+          <span>A</span><span>R</span><span>V</span><span>E</span><span>N</span><span>O</span>
+        </h1>
+        <p class="tagline">
+          我们把想法打磨成
+          <span class="rotator" aria-live="polite"><span id="rotate">网站</span></span>
+        </p>
+      </div>
+      <div class="hero-foot mono">
+        <span>移动鼠标，搅动这片流场</span>
+        <a href="#services" class="scroll-hint">向下探索 ↓</a>
       </div>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>网站建设</span><i>✦</i><span>产品设计</span><i>✦</i><span>品牌视觉</span><i>✦</i><span>创意编程</span><i>✦</i><span>Web 应用</span><i>✦</i><span>交互体验</span><i>✦</i>
+        <span>网站建设</span><i>✦</i><span>产品设计</span><i>✦</i><span>品牌视觉</span><i>✦</i><span>创意编程</span><i>✦</i><span>Web 应用</span><i>✦</i><span>交互体验</span><i>✦</i>
+      </div>
+    </div>
 
     <section id="services" class="section">
-      <div class="container">
+      <header class="section-head reveal">
+        <span class="mono">(01)</span>
         <h2>我们做什么</h2>
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="icon">◐</div>
-            <h3>品牌与设计</h3>
-            <p>视觉识别、UI/UX 设计，让产品有清晰一致的个性。</p>
-          </article>
-          <article class="card">
-            <div class="icon">⌘</div>
-            <h3>网站与应用开发</h3>
-            <p>官网、Web 应用、小程序，从原型到上线一站完成。</p>
-          </article>
-          <article class="card">
-            <div class="icon">↗</div>
-            <h3>技术咨询</h3>
-            <p>架构选型、性能优化与自动化，帮助团队走得更快。</p>
-          </article>
-        </div>
-      </div>
+      </header>
+      <ol class="services">
+        <li class="reveal">
+          <span class="num mono">01</span>
+          <h3>品牌与视觉</h3>
+          <p>标志、视觉识别与设计规范，让你一眼被认出来。</p>
+        </li>
+        <li class="reveal">
+          <span class="num mono">02</span>
+          <h3>网站与应用</h3>
+          <p>官网、Web 应用、小程序，从原型到上线一手包办。</p>
+        </li>
+        <li class="reveal">
+          <span class="num mono">03</span>
+          <h3>产品设计</h3>
+          <p>梳理需求、设计流程与界面，让复杂的事变简单。</p>
+        </li>
+        <li class="reveal">
+          <span class="num mono">04</span>
+          <h3>创意编程</h3>
+          <p>生成艺术、数据可视化与互动装置，就像页面顶部那片流场。</p>
+        </li>
+      </ol>
     </section>
 
-    <section id="work" class="section alt">
-      <div class="container">
+    <section id="work" class="section">
+      <header class="section-head reveal">
+        <span class="mono">(02)</span>
         <h2>精选作品</h2>
-        <p class="sub">以下为示例占位，后续替换为真实项目。</p>
-        <div class="grid grid-3">
-          <a class="work" href="#">
-            <div class="thumb t1"></div>
-            <h3>项目一</h3>
-            <p>品牌官网 · 2026</p>
-          </a>
-          <a class="work" href="#">
-            <div class="thumb t2"></div>
-            <h3>项目二</h3>
-            <p>SaaS 产品设计 · 2026</p>
-          </a>
-          <a class="work" href="#">
-            <div class="thumb t3"></div>
-            <h3>项目三</h3>
-            <p>数据可视化平台 · 2025</p>
-          </a>
-        </div>
+        <p class="mono note">* 示例占位，后续替换为真实项目</p>
+      </header>
+      <div class="works">
+        <a class="work reveal" href="#">
+          <div class="art art-1"><span></span></div>
+          <div class="work-meta"><h3>项目一</h3><span class="mono">品牌官网 — 2026</span></div>
+        </a>
+        <a class="work reveal" href="#">
+          <div class="art art-2"></div>
+          <div class="work-meta"><h3>项目二</h3><span class="mono">SaaS 产品设计 — 2026</span></div>
+        </a>
+        <a class="work reveal" href="#">
+          <div class="art art-3"></div>
+          <div class="work-meta"><h3>项目三</h3><span class="mono">数据可视化 — 2025</span></div>
+        </a>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="container about">
-        <div>
-          <h2>关于 Arveno</h2>
-          <p>我们相信好的产品源于对细节的坚持。Arveno 以小团队的灵活和专注，为客户和自己打造简洁、可靠、经得起时间考验的数字作品。</p>
-          <p>这里可以写团队介绍、个人经历，或者公司愿景。</p>
-        </div>
-        <ul class="stats">
-          <li><strong>10+</strong><span>完成项目</span></li>
-          <li><strong>5年</strong><span>行业经验</span></li>
-          <li><strong>100%</strong><span>用心交付</span></li>
-        </ul>
-      </div>
+      <header class="section-head reveal">
+        <span class="mono">(03)</span>
+        <h2>关于</h2>
+      </header>
+      <p class="statement" id="statement">我们相信好的作品源于对细节的偏执。Arveno 以小团队的灵活和专注，为客户和自己打造简洁、可靠、经得起时间考验的数字作品——不堆砌，不将就。</p>
+      <ul class="stats">
+        <li class="reveal"><strong data-count="10">0</strong><sup>+</sup><span class="mono">完成项目</span></li>
+        <li class="reveal"><strong data-count="5">0</strong><sup>年</sup><span class="mono">行业经验</span></li>
+        <li class="reveal"><strong data-count="100">0</strong><sup>%</sup><span class="mono">用心交付</span></li>
+      </ul>
     </section>
 
-    <section id="contact" class="section alt">
-      <div class="container contact">
-        <h2>一起做点什么吧</h2>
-        <p class="sub">有项目想法、合作意向，或者只是想打个招呼，欢迎来信。</p>
-        <a class="btn btn-lg" href="mailto:hello@arveno.tech">hello@arveno.tech</a>
-      </div>
+    <section id="contact" class="contact">
+      <p class="mono">(04) — 有想法？</p>
+      <h2>一起做点<br>有意思的东西</h2>
+      <a class="mail magnetic" href="mailto:hello@arveno.tech">hello@arveno.tech <span>↗</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year">2026</span> Arveno. All rights reserved.</span>
-      <span>arveno.tech</span>
-    </div>
+  <footer class="footer mono">
+    <span>© <span id="year">2026</span> Arveno</span>
+    <span>手工打造 · 无模板</span>
+    <a href="#top">回到顶部 ↑</a>
   </footer>
 
   <script src="assets/main.js"></script>

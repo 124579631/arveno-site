@@ -5,9 +5,10 @@
 ## 结构
 
 ```
-index.html          首页（导航 / 首屏 / 服务 / 作品 / 关于 / 联系）
-assets/style.css    样式（自动适配深色模式、移动端）
-assets/main.js      移动端菜单、年份
+index.html          首页（流场首屏 / 滚动字带 / 服务 / 作品 / 关于 / 联系）
+assets/style.css    样式（深色主题，主色 --accent，移动端适配，尊重“减少动态效果”设置）
+assets/main.js      流场动画、文字轮播、滚动显现、自定义光标、磁吸按钮、卡片倾斜
+assets/fonts/       自托管字体 Unbounded + JetBrains Mono（OFL 授权，国内可加载）
 assets/favicon.svg  图标
 CNAME               GitHub Pages 自定义域名用
 ```
@@ -38,6 +39,6 @@ arveno.tech, www.arveno.tech {
 
 ## 待替换内容
 
-- 作品区的三个占位项目（标题、链接、封面图）
+- 作品区的三个占位项目（标题、链接；封面目前是 CSS 生成的图案，可换成图片）
 - 关于区的文字和数据
 - 联系邮箱 `hello@arveno.tech`
