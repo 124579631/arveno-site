@@ -11,8 +11,8 @@ tick();
 setInterval(tick, 1000);
 
 // Rotating word in the tagline
-const words = ['网站', '产品', '品牌', '工具', '体验'];
 const rotate = document.getElementById('rotate');
+const words = rotate.dataset.words.split(',');
 let wi = 0;
 setInterval(() => {
   wi = (wi + 1) % words.length;

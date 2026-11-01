@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arveno — Digital Atelier</title>
+  <meta name="description" content="Arveno is a small, focused digital atelier crafting websites, products and brands.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:title" content="Arveno — Digital Atelier">
+  <meta property="og:description" content="We craft ideas into websites, products and brands.">
+  <meta property="og:url" content="https://arveno.tech/en/">
+  <link rel="alternate" hreflang="zh-CN" href="https://arveno.tech/">
+  <link rel="alternate" hreflang="en" href="https://arveno.tech/en/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="logo" href="#top">arveno<span class="dot">.</span></a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="../" class="lang" hreflang="zh-CN" lang="zh-CN">中文</a>
+    </nav>
+    <span class="clock mono" id="clock">UTC+8 · --:--</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="mono meta">[ Digital Atelier — Est. 2026 ]</p>
+        <h1 class="wordmark" aria-label="Arveno">
+          <span>A</span><span>R</span><span>V</span><span>E</span><span>N</span><span>O</span>
+        </h1>
+        <p class="tagline">
+          We craft ideas into
+          <span class="rotator" aria-live="polite"><span id="rotate" data-words="websites,products,brands,tools,experiences">websites</span></span>
+        </p>
+      </div>
+      <div class="hero-foot mono">
+        <span>Move your cursor to stir the field</span>
+        <a href="#services" class="scroll-hint">Scroll to explore ↓</a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Websites</span><i>✦</i><span>Product Design</span><i>✦</i><span>Brand Identity</span><i>✦</i><span>Creative Coding</span><i>✦</i><span>Web Apps</span><i>✦</i><span>Interaction</span><i>✦</i>
+        <span>Websites</span><i>✦</i><span>Product Design</span><i>✦</i><span>Brand Identity</span><i>✦</i><span>Creative Coding</span><i>✦</i><span>Web Apps</span><i>✦</i><span>Interaction</span><i>✦</i>
+      </div>
+    </div>
+
+    <section id="services" class="section">
+      <header class="section-head reveal">
+        <span class="mono">(01)</span>
+        <h2>What we do</h2>
+      </header>
+      <ol class="services">
+        <li class="reveal">
+          <span class="num mono">01</span>
+          <h3>Brand &amp; Identity</h3>
+          <p>Logos, visual systems and guidelines that make you instantly recognisable.</p>
+        </li>
+        <li class="reveal">
+          <span class="num mono">02</span>
+          <h3>Websites &amp; Apps</h3>
+          <p>Company sites, web apps and mini programs — from prototype to launch.</p>
+        </li>
+        <li class="reveal">
+          <span class="num mono">03</span>
+          <h3>Product Design</h3>
+          <p>Untangling requirements, flows and interfaces until the complex feels simple.</p>
+        </li>
+        <li class="reveal">
+          <span class="num mono">04</span>
+          <h3>Creative Coding</h3>
+          <p>Generative art, data visualisation and interactive pieces — like the field up top.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="work" class="section">
+      <header class="section-head reveal">
+        <span class="mono">(02)</span>
+        <h2>Selected work</h2>
+        <p class="mono note">* Placeholders — real projects coming soon</p>
+      </header>
+      <div class="works">
+        <a class="work reveal" href="#">
+          <div class="art art-1"><span></span></div>
+          <div class="work-meta"><h3>Project One</h3><span class="mono">Brand website — 2026</span></div>
+        </a>
+        <a class="work reveal" href="#">
+          <div class="art art-2"></div>
+          <div class="work-meta"><h3>Project Two</h3><span class="mono">SaaS product design — 2026</span></div>
+        </a>
+        <a class="work reveal" href="#">
+          <div class="art art-3"></div>
+          <div class="work-meta"><h3>Project Three</h3><span class="mono">Data visualisation — 2025</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <header class="section-head reveal">
+        <span class="mono">(03)</span>
+        <h2>About</h2>
+      </header>
+      <p class="statement" id="statement">We believe good work comes from an obsession with detail. Arveno brings the agility and focus of a small team to building simple, reliable digital work that stands the test of time — for our clients and for ourselves. No clutter, no compromise.</p>
+      <ul class="stats">
+        <li class="reveal"><strong data-count="10">0</strong><sup>+</sup><span class="mono">Projects shipped</span></li>
+        <li class="reveal"><strong data-count="5">0</strong><sup>yrs</sup><span class="mono">Of experience</span></li>
+        <li class="reveal"><strong data-count="100">0</strong><sup>%</sup><span class="mono">Care in every delivery</span></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="mono">(04) — Got an idea?</p>
+      <h2>Let’s make<br>something good</h2>
+      <a class="mail magnetic" href="mailto:hello@arveno.tech">hello@arveno.tech <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year">2026</span> Arveno</span>
+    <span>Handcrafted · No templates</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

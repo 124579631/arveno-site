@@ -5,7 +5,8 @@
 ## 结构
 
 ```
-index.html          首页（流场首屏 / 滚动字带 / 服务 / 作品 / 关于 / 联系）
+index.html          中文首页（流场首屏 / 滚动字带 / 服务 / 作品 / 关于 / 联系）
+en/index.html       英文页面（结构与中文一致，改文案时两边同步）
 assets/style.css    样式（深色主题，主色 --accent，移动端适配，尊重“减少动态效果”设置）
 assets/main.js      流场动画、文字轮播、滚动显现、自定义光标、磁吸按钮、卡片倾斜
 assets/fonts/       自托管字体 Unbounded + JetBrains Mono（OFL 授权，国内可加载）
