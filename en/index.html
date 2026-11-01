@@ -9,6 +9,23 @@
   <meta property="og:title" content="Arveno — Digital Atelier">
   <meta property="og:description" content="We craft ideas into websites, products and brands.">
   <meta property="og:url" content="https://arveno.tech/en/">
+  <script>
+    // Pick the page language: explicit choice (?lang= or saved) wins, else the browser language
+    (function () {
+      var page = 'en';
+      if (/bot|crawl|spider|slurp|preview/i.test(navigator.userAgent)) return;
+      var q = new URLSearchParams(location.search).get('lang');
+      var saved = null;
+      try {
+        if (q === 'zh' || q === 'en') localStorage.setItem('lang', q);
+        saved = localStorage.getItem('lang');
+      } catch (e) {}
+      if (q) history.replaceState(null, '', location.pathname + location.hash);
+      var browser = /^zh/i.test((navigator.languages && navigator.languages[0]) || navigator.language || '') ? 'zh' : 'en';
+      var want = q || saved || browser;
+      if (want !== page) location.replace((want === 'en' ? '/en/' : '/') + location.hash);
+    })();
+  </script>
   <link rel="alternate" hreflang="zh-CN" href="https://arveno.tech/">
   <link rel="alternate" hreflang="en" href="https://arveno.tech/en/">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -26,7 +43,7 @@
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="../" class="lang" hreflang="zh-CN" lang="zh-CN">中文</a>
+      <a href="/?lang=zh" class="lang" hreflang="zh-CN" lang="zh-CN">中文</a>
     </nav>
     <span class="clock mono" id="clock">UTC+8 · --:--</span>
   </header>
